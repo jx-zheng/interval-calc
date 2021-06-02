@@ -385,8 +385,8 @@ void integers(double a, double b, bool init) {
   if (!init) {
     output_imm(a, b, init);
   } else {
-    int ceila{ceil(a)};
-    int floorb{floor(b)};
+    int ceila = static_cast<int>(ceil(a));
+    int floorb = static_cast<int>(floor(b));
     while (ceila <= floorb) {
       if (!(ceila == floorb)) {
         std::cout << ceila << ", ";
